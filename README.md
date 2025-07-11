@@ -10,5 +10,14 @@ Each folder includes a different JavaScript exercise or small project focusing o
 
 1. Clone the repository:
 
+
+
+
+
+
+
+l;;;;;;;;;;;;;;;;;
+
+
 ```bash
 git clone https://github.com/faustin12-g/JS-Fundamentals-project-KATAs.git
