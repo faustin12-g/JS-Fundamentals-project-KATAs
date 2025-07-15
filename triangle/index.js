@@ -1,15 +1,18 @@
-const catSays = function(max)
+function makeTriangle(num)
 {
-    var say = "";
-    for(var i = 0; i < max; i++ )
+    
+    for(let i=0; i<num; i++)
     {
-        say += "meow ";
+        let triangle = ""
+        for(let j=0; j<num; j++)
+        {
+            triangle += "*"
+            
+
+        }
+        console.log(triangle + "\n")
+        // console.log("\n");
     }
-    return say;
 }
 
-function catCall(callFunc)
-{
-    return "It said," + callFunc(3);
-}
-catCall(catSays);
+makeTriangle(4)
