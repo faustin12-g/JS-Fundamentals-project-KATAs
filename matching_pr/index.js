@@ -23,7 +23,7 @@ function fixParentheses(s) {
     for (let char of s) {
         if (char === '(') {
             balance++;
-        } else if (char === ')') {      // )()())
+        } else if (char === ')') {      // )(    ))))(()(
             if (balance > 0) {
                 balance--; // match found
             } else {
@@ -36,4 +36,4 @@ function fixParentheses(s) {
 }
 
 console.log(fixParentheses(")("));         // Output: "()()"
-console.log(fixParentheses("))))(()("));   // Output: "(((())))(()())"
+console.log(fixParentheses("))))(((()(()(())(()))((())))(())))()("));   // Output: "(((())))(()())"

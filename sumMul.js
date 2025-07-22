@@ -16,4 +16,4 @@ function sumMl(n, m)
 }
 console.log(sumMl(2, 9)); // Output: 55
 
-let c = 'F'
+

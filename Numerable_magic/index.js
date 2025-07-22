@@ -1,6 +1,6 @@
-function all(arr, fun)
+function NumMagic(arr, func)
 {
-    return arr.every(fun)
+    return arr.every(func)
 }
 
-console.log(all([1, 2, 3, 4, 5], (num) => num > 10))
+console.log(NumMagic([1,2,3,4,5], num=>num==10))

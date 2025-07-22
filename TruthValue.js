@@ -19,4 +19,4 @@ function logocalCalc(array, op)
         return false;
     }
 }
-console.log(logocalCalc([false, false, false], "AND")); // true
+console.log(logocalCalc([false, false, false], "AND"))
