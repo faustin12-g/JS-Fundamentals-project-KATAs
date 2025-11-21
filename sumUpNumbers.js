@@ -1,29 +1,30 @@
-function sumUpNumbers(arr)
-{
-   let sum = 0;
-   for(let a of arr)
-   {
+function sumUpNumbers(arr) {
+  let total = 0;
+
+  for (let a of arr) {
     let decimalChar = null;
-    if(/,[1,9]{1,2}$/.test(a)) decimalChar = ',';
-    else if(/\.[1,9]{1,2}$/.test(a)) decimalChar = '.';
 
-    let nomulated = a;
-    if(decimalChar === ',')
-    {
-        nomulated = a.replace(/\./g, '').replace(',', '.');
+    if (/,[0-9]{1,2}$/.test(a)) decimalChar = ",";
+    else if (/\.[0-9]{1,2}$/.test(a)) decimalChar = ".";
 
+    let normalized = a;
+
+    if (decimalChar === ",") {
+      normalized = normalized.replace(/\./g, "");
+      normalized = normalized.replace(",", ".");
+    } else if (decimalChar === ".") {
+      normalized = normalized.replace(/,/g, "");
+    } else {
+      normalized = normalized.replace(/[.,]/g, "");
     }
-    else if(decimalChar === '.')
-    {
-        nomulated = a.replace(/,/g, '');
-    }
-    else{
-        nomulated = a.replace(/[.,]/g, '');
-    }
-    sum += parseFloat(nomulated);
-    
-   }
-    return sum;
+
+    total += Number(normalized);
+  }
+
+  return total.toLocaleString("en-US", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
 }
 
 console.log(sumUpNumbers(['1,234.56', '2.345,67', '3,456', '4.567'])); // Output: 12303.23
